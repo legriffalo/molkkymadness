@@ -1,0 +1,123 @@
+.hidden{
+    display:none !important;
+    border-style: none !important;
+    height:0 !important;
+    width:0 !important;
+    overflow: hidden !important;
+}
+
+body div{
+    border-radius: 5px;
+    color:#005b91;
+    background-color: #F7F7F7;
+}
+
+#splash{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-image: url("../assets/banner.png");
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#header {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 0;
+    background-image: url("../assets/banner.png");
+    background-color:lightblue;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    height:20vh;
+
+}
+
+.control {
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+  }
+  
+  .control:hover,
+  .control:focus { 
+    background-color: #16437E;
+    color: #ffffff;
+  }
+  
+  .control:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+  }
+  
+  .control:disabled { 
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+  }
+
+#setup p{
+    margin-top:2px;
+
+}
+
+.buttons.buttons {
+    margin-top:0.5vh;
+    margin-bottom:0.5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;  
+
+}
+
+.buttons.buttons button{
+    width:40vw;
+    height:15vh;
+    border-radius: 5px;
+    margin:auto;
+    margin-top:2vh;
+    display:block;
+}
+
+.minimised.minimised.minimised button{
+    width:25vw;
+    height:5vh;
+    border-radius: 5px;
+    margin:auto;
+    display:inline;
+}
+
+.minimised.minimised.minimised {
+    margin-top:0.5vh;
+    margin-bottom:0.5vh;    
+    /* border-style: dotted; */
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+    }

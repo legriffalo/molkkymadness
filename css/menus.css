@@ -1,0 +1,108 @@
+
+
+.menu::-webkit-scrollbar {
+    display: none;
+  }
+
+.menu{
+    position:fixed;
+    left:8vw;
+    top:8vh;
+    width:80vw;
+    height:80vh;
+    padding:auto;
+    text-align: center;
+    border-style: solid;
+    border-color:#0A66C2;
+    border-width: 2vw;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+}
+
+.menu button{
+    position:sticky;
+    width:25vw;
+    height:10vh;
+    border-radius: 5px;
+    margin:auto;
+    display:block;
+    margin-top: 3vh;
+}
+
+.menu .setup3{
+    /* position:absolute;
+    left:60vw;
+    top:-3vh; */
+    max-width:5vw;
+    height:3vh !important;
+    border-radius: 5px !important;
+    color:white;
+    background-color:red;
+    font-size:0.1em;
+    display:inline;
+    padding:auto;
+    text-align: center!important;
+    border-width: 1px !important;
+}
+
+.menu .setup2{
+    position:absolute;
+    left:28vw;
+    top:-3vh;
+    max-width:5vw;
+    height:3vh !important;
+    border-radius: 5px !important;
+    color:white;
+    background-color:red;
+    font-size:0.1em;
+    display:inline;
+    padding:auto;
+    text-align: center!important;
+    border-width: 1px !important;
+}
+
+.menu .setup1 {
+    max-width:25vw;
+    height:3vh !important;
+    border-radius: 5px !important;
+    color:white;
+    background-color:green;
+}
+
+.menu .listed{
+    font-size:1em;
+    text-align: left;
+    margin-left: 2vw;
+    margin-top: 3vh;
+}
+
+.menu .listed p{
+    position:relative;
+    min-width:25vw;
+    padding:auto;
+}
+
+#newgamebackbutton{
+    background-color: red !important;
+}
+
+.menu div{
+    float:left;
+    width:35vw;
+    height:60vh;
+}
+
+#rulesedit div{
+    display:block !important;
+    width:100%;
+    height:auto;
+}
+
+#rulesedit p{
+    text-align: left;
+    display:block;
+    /* position:relative; */
+}

@@ -1,0 +1,74 @@
+.zone{
+    position:absolute;
+    font-size: 1em;
+    border-radius: 5px;
+    border-style:solid;
+    padding:2vmin;    
+    }
+
+#container{
+    left:0;
+    top: 28vh;
+    position:absolute;
+    width:90vw;
+    height:70vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-style:solid;  
+    }
+
+#scoreboard{
+    top:1vh;
+    left:1vw;
+    width:28vw;
+    height:65vh;
+    padding:auto;
+   } 
+
+#currentturn{
+    height:65vh;
+    top:1vh;
+    left:34vw;
+    width:50vw;
+    padding:auto;
+}
+
+#turnend{
+    display:block;
+    margin-top:2vh;
+}
+
+#twostrike{
+    position:fixed;
+    z-index:2;
+    top:22vh;
+    height:45vh;
+    border-color: red;
+    color:black;
+    /* background-image: URL('../assets/instructions3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+
+}
+
+#twostrike img{
+    margin-top:3vh;
+    margin:auto;
+    width:50vw;
+    max-height: 30vh;
+    display:block;
+}
+
+#eliminated{
+    position:fixed;
+    z-index:2;
+    top:22vh;
+    height:45vh;
+    border-color: red;
+    color:black;
+}
+
+#scully{
+    font-size: 6em;
+}
+

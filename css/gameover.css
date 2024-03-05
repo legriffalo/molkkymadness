@@ -1,0 +1,78 @@
+#gameover{
+    font-size: 1.5em;
+    z-index:200;
+}
+
+#gameover h4{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#gameover #eliminatedsummary{
+    color:red;
+    width:24vw !important;
+    font-size: 0.8em;
+    text-align: left;
+    border-style: dashed;
+    height: 40vh;
+    margin-left:1vw;
+
+    }
+
+#eliminatedlist{
+    font-size: 0.8em;
+    width:23vw;
+    height:29vh;
+    margin-left:1vw;
+
+    }
+
+#gameover #finishedsummary{
+    font-size: 0.8em;
+    width:24vw !important;
+    text-align: left;
+    margin-left:1vw;
+    border-style:dashed;
+    height: 40vh;
+    }
+
+#finished{
+    font-size: 0.8em;
+    width:23vw;
+    height:29vh;
+    margin-left:1vw;
+
+
+    }
+
+#gameover #winnerssummary{
+    color:green;
+    width:24vw !important;
+    font-size: 0.8em;
+    text-align: left;
+    margin-left:1vw;
+    border-style: dashed;
+    height: 40vh;
+
+    }
+
+#podium{
+    font-size: 0.8em;
+    width:23vw;
+    height:29vh;
+    margin-left:1vw;
+
+    }
+
+#ggbuttons{
+    width:70vw;
+    
+}
+#ggbuttons button{
+    width:30vw;
+    height:5vh;
+    border-radius: 5px;
+    display:inline;
+    margin:auto;
+    font-size:0.5em ;
+}

@@ -1,0 +1,42 @@
+#rulebook{
+    z-index:1;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    font-size: 1.5em;
+}
+
+#rulebook::-webkit-scrollbar {
+    display: none;
+  }
+
+#rulebook img{
+    margin-top:3vh;
+    margin:auto;
+    width:30vw;
+    display:block;
+
+}
+
+#rulebook img{
+    margin-top:3vh;
+    margin:auto;
+    width:30vw;
+    display:block;
+
+}
+
+#centerdiv{
+    margin:auto;
+    width:45vw;
+    text-align: left;
+
+}
+
+#hiderulebookbutton{
+    height:5vh;
+    width:100%;
+    position:sticky;
+    top:2vh;
+}

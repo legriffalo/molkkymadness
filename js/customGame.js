@@ -26,7 +26,7 @@ function showRuleUpdates(gamestate){
 
     // console.log(gamestate)
     for(i=0;i < rules.length;i++){
-        rulesShow.innerHTML+= `<p> <button data-key = ${keys[i]} class = 'setup3'>remove</button> rule ${keys[i]}: ${rules[i]}</p>`
+        rulesShow.innerHTML+= `<p><button data-key = ${keys[i]} class = 'setup3'>remove</button> <span class = "ruletext"> rule ${keys[i]}: ${rules[i]}</span></p>`
     }
     //arm remove buttons
     let removebuttons = document.getElementById('ruleshow').getElementsByTagName('button');

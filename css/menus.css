@@ -36,13 +36,13 @@
     /* position:absolute;
     left:60vw;
     top:-3vh; */
-    max-width:5vw;
+    max-width:12vw;
     height:3vh !important;
     border-radius: 5px !important;
     color:white;
     background-color:red;
-    font-size:0.1em;
-    display:inline;
+    font-size:0.6em;
+    display:inline-block;
     padding:auto;
     text-align: center!important;
     border-width: 1px !important;
@@ -52,12 +52,12 @@
     position:absolute;
     left:28vw;
     top:-3vh;
-    max-width:5vw;
+    max-width:12vw;
     height:3vh !important;
-    border-radius: 5px !important;
+    border-radius: 6px !important;
     color:white;
     background-color:red;
-    font-size:0.1em;
+    font-size:0.6em;
     display:inline;
     padding:auto;
     text-align: center!important;
@@ -100,9 +100,19 @@
     width:100%;
     height:auto;
 }
-
+#rulesedit #ruleshow span {
+    position:relative;
+    display:inline-block;
+    left:1vw;
+    width:63vw;
+    
+}
 #rulesedit p{
     text-align: left;
     display:block;
     /* position:relative; */
+}
+
+#ruleshow p{
+    display:block;
 }

@@ -61,7 +61,7 @@ newplayer.addEventListener('pointerdown', ()=>{
         window.alert('input a name!')
         }
     else if(players.indexOf(name)!=-1){
-        window.alert(players.indexOf(name))
+        // window.alert(players.indexOf(name))
         window.alert('name already taken!')
         }
     else{
@@ -69,7 +69,13 @@ newplayer.addEventListener('pointerdown', ()=>{
         //update game state
         players.push(name);
         added.innerHTML ='';
-        
+
+        // return focus to the names button
+        console.log('should return focus')
+        document.getElementById('playername').focus();
+        // document.getElementById('playername').select();
+        // document.getElementById('playername').setSelectionRange(0, 1);
+
         for(let i=0; i < players.length;i++){
             added.innerHTML += `<p class = 'player'>${players[i]}<button class = 'setup2'>remove</button></p>`
         }
@@ -89,7 +95,9 @@ newplayer.addEventListener('pointerdown', ()=>{
             parent.remove();
         })
         
+
     }
+    
 }
 });
 // add listeners to the start game buttons

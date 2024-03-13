@@ -2,6 +2,8 @@
 
 #player{
     color:green;
+    font-size:1.2em;
+
 }
 
 #turntask{
@@ -12,5 +14,8 @@
 
 #nextplayer{
     color:orange;
+    font-size:1.2em;
+    
+
 }
 

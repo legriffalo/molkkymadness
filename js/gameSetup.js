@@ -12,30 +12,30 @@ let gamestate = {'gameon':false,
             };
 
 let players = gamestate.players
-// let name = document.getElementById('playername').value;
 let added = document.getElementById('addedplayers');
-
 added.innerHTML ='';
+
+
 for(let i=0; i < players.length;i++){
     added.innerHTML += `<p class = 'player'>${players[i]}<button class = 'setup2'>remove</button></p>`
     }
 
-    let buttons = document.getElementById('addedplayers').getElementsByTagName('button');
-    // window.alert(buttons.length)
-    for(let i = 0; i < buttons.length ;i++){
-        let button = buttons[i];
+let buttons = document.getElementById('addedplayers').getElementsByTagName('button');
+// window.alert(buttons.length)
+for(let i = 0; i < buttons.length ;i++){
+    let button = buttons[i];
+    
+    button.addEventListener('pointerdown', (e)=>{
+        let parent = e.currentTarget.parentNode
+        console.log(parent)
+        let player = parent.textContent.replace('remove','');
         
-        button.addEventListener('pointerdown', (e)=>{
-            let parent = e.currentTarget.parentNode
-            console.log(parent)
-            let player = parent.textContent.replace('remove','');
-            
-            players.splice(players.indexOf(player),1);
-            console.log(players);
-            parent.remove();
-        })
-        
-    }
+        players.splice(players.indexOf(player),1);
+        console.log(players);
+        parent.remove();
+    })
+    
+}
 
 //Activate buttons for gameSetup
 let newplayer = document.getElementById('addplayer');
@@ -171,3 +171,8 @@ restartsamebutton.addEventListener('pointerdown',(e)=>{
     document.getElementById('buttons').classList.toggle('minimised')
 
 })
+
+// restart fully 
+resetgameendbutton.addEventListener('pointerdown',(e)=>{
+    location.reload();
+});

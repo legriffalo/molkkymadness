@@ -8,19 +8,28 @@ gamestate.totals = arrayToObj(gamestate.players,filler = 0);
 
 // console.log(gamestate)
 if(gamestate.rules == "custom"){
+    document.getElementById('task').classList.remove('hidden');
+
     customGame(gamestate)
 }
-else{
+else if(gamestate.rules == "standard"){
+    document.getElementById('task').classList.remove('hidden');
+
     let choice = String(gamestate.rules);
     gamestate.rules = rulesets[choice]
     // console.log(choice)
     startGame(gamestate);
 
 }
+else{ 
+    document.getElementById('task').classList.add('hidden');
+    startGame(gamestate);
+}
 }
 // Start the game loop
 function startGame(gamestate){
     gamestate.gameon = true;
+    document.getElementById('newgamebutton').classList.add('hidden')
     document.getElementById('container').classList.toggle('hidden');
     document.getElementById('buttons').classList.toggle('minimised');
     // preTurn(gamestate)
@@ -37,13 +46,43 @@ function ruleSelect(gamestate){
     return [rand, rules[rand]];
 
 }
+// checks for *num* pattern and random generates it
+function insertRand(rule){
+    let splitUp = String(rule).split('*');
+    console.log('LLOOOOOOKKKKKK')
+    console.log(splitUp);
+    if(splitUp.length>1){
+        console.log(splitUp.length)
+        console.log('rule has rands', splitUp)
+        splitUp.forEach((el,i)=>{
+            i%2!=0? splitUp[i] = Math.floor(Math.random()*parseInt(splitUp[i]))+1: splitUp[i];
+        })
+
+        rule = splitUp.join(' ')
+        
+    }
+    else{
+        console.log('no rands')
+    }
+    return String(rule)
+}
+
 // Function to manage updates to gamestate before each turn
 function preTurn(gamestate, player){
     document.getElementById('player').innerHTML = player;
     //get rule
-    let rule = ruleSelect(gamestate)
+    let rule = ruleSelect(gamestate);
+    rule[1] = insertRand(rule[1]);
+    console.log('rule', rule)
+    // set next player 
+    let players = gamestate.players;
+    let index = players.indexOf(player);
+    let indexNext = (index+1)%players.length
+    let nextPlayer = players[indexNext];
     
+    document.getElementById('nextplayer').innerHTML = nextPlayer;
     document.getElementById('roll').innerHTML =rule[0];
+    console.log('rule is showing as ', rule[1])
     document.getElementById('turntask').innerHTML = rule[1];    
    
     }

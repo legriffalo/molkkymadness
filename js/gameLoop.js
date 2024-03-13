@@ -3,7 +3,8 @@
 let userInput = 1
 // Run functions for pre scoring
 function gameLoop1(gamestate) {
-
+    console.log('cycle is starting...')
+    console.log(gamestate)
     if(gamestate.gameon){
         let players = gamestate.players;
         let player = gamestate.currentPlayer? gamestate.currentPlayer : players[0];
@@ -24,7 +25,7 @@ function gameLoop2(gamestate){
     if(gamestate.gameon){
     let players = gamestate.players;
     let player = gamestate.currentPlayer? gamestate.currentPlayer : players[0];
-
+    console.log('player should still be ...',player )
     scoreUpdate(gamestate,player)
     applyScoring(gamestate,player)
     checkFinish(gamestate,player)

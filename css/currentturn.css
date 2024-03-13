@@ -1,0 +1,16 @@
+/* tags in order of appearance*/
+
+#player{
+    color:green;
+}
+
+#turntask{
+    color:red;
+    min-height:20vh;
+    background-color: yellow;
+}
+
+#nextplayer{
+    color:orange;
+}
+

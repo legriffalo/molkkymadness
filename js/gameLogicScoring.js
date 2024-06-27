@@ -84,7 +84,10 @@ function preTurn(gamestate, player){
     document.getElementById('roll').innerHTML =rule[0];
     console.log('rule is showing as ', rule[1])
     document.getElementById('turntask').innerHTML = rule[1];    
-   
+    // recently added 25/06/24
+    
+    document.getElementById('turninput').value='';
+
     }
 // Cycles through players
 function scoreUpdate(gamestate,player){

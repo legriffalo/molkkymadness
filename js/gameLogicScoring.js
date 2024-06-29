@@ -103,7 +103,8 @@ function scoreUpdate(gamestate,player){
 }
 // Move gamestate to next player
 function nextPlayer(gamestate,players,player){
-    // applyScoring(gamnestate)
+    //check me
+    // applyScoring(gamestate)
     let index = players.indexOf(player);
     let indexNext = (index+1)%players.length
     let nextPlayer = players[indexNext];
@@ -126,10 +127,14 @@ function applyScoring(gamestate, player){
     // console.log(player)
 
     // console.log(scores)
-    
-    total = scores.length>0? scores.reduce( (accumulator, currentValue) => 
-    {return accumulator + currentValue >50? 25: accumulator + currentValue;}):0;
 
+    // last fixes here 29/06/24
+    let initialValue = 0
+    total = scores.length>0? scores.reduce( (accumulator, currentValue) => 
+    {return accumulator + currentValue >50? 25: accumulator + currentValue;},initialValue):0;
+    
+
+    
     // console.log(total)
     totals[player] = total;
     

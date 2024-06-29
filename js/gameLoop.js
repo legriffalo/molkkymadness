@@ -22,6 +22,8 @@ function gameLoop1(gamestate) {
 }
 //run functions post score input
 function gameLoop2(gamestate){
+    // scoreUpdate(gamestate,player)
+
     if(gamestate.gameon){
     let players = gamestate.players;
     let player = gamestate.currentPlayer? gamestate.currentPlayer : players[0];

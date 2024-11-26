@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Molkky madness</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel ='stylesheet' href="./css/general.css">
+  <link rel ='stylesheet' href="./css/menus.css">
+  <link rel ='stylesheet' href="./css/rules.css">
+  <link rel ='stylesheet' href="./css/zones.css">
+  <link rel ='stylesheet' href="./css/gameover.css">
+  <link rel ='stylesheet' href="./css/currentturn.css">
+
+
+
+</head>
+    
+
+<body>
+<!--opening splash screen-->
+<div class='hidden' id = 'splash'></div>
+
+<!--new game setup/menu screen-->
+<div id = 'newgamemenu' class = 'menu hidden'>
+
+    <h2>Game setup</h2>
+    <div id ='addplayers'>
+        <h4>Add players</h4>
+        <div id ='setup'>
+            <input id="playername" placeholder="add a player">
+            <button class = 'setup1' id = 'addplayer'>add player</button>
+            <div class = 'listed' id = 'addedplayers'></div>
+        </div>
+
+    </div>
+    <h4>Select Game mode</h4>
+    <button id = 'newgamemadnessbutton' data-rule-set = 'standard' class = 'gamestarters control'>Mylkky madness</button>
+    <button id = 'newgameclassicbutton' data-rule-set = 'classic' class = 'gamestarters control'>Classic OG molkky</button>
+    <button id = 'newgamecustombutton'  data-rule-set = 'custom' class = 'gamestarters control'>Custom game</button>
+    <button id = 'newgamebackbutton' class = 'control'>Back</button>
+</div>
+
+    <!--rule book-->
+<div class = 'menu hidden' id="rulebook">
+        <button class = 'control' id="hiderulebookbutton">Hide</button>
+        <h1>The rules of the game</h1>
+        <div id="centerdiv">
+            <ol>
+                <li><p>Set up a throwing line/mark to throw from.</p>
+                    <img class ='instruction' src ="./assets/instructions1.jpg">
+                </li>
+                <li><p>Set up the Molkky blocks as pictured on the bag 1.5m from 
+                    you throwing line</p>
+                    <img class ='instruction' src ="./assets/instructions2.jpg">
+                </li>
+                <li><p>Take it in turns to throw the m&#246;lkky at the numbered 
+                    blocks. 
+                    <br/>
+                    <br/>
+                    <span class = 'aside'>If you are playing Molkky Madness you will get an additional 
+                    condition or instructions to be used that turn.</span> </p>
+                    <img class ='instruction' src ="./assets/instructions3.jpg">
+                </li>
+                <li> Scoring your turn is simple unless a condition or instruction 
+                    changes scoring for your turn.
+                    <br/>
+
+                    <ul>
+                        <li>If you knock over 1 block you get the points written on it </li>
+                        <br/>
+                        <li>If you knock over multiple blocks you get a point for each block knocked over</li>
+                        <br/>
+                        <li>If you miss you get 0</li>
+                        <br/>
+                        <li><span class = 'aside'>If a condition or instruction alters scoring on your turn use that to score your turn</span></li>
+                    </ul>
+                </li>
+                <li>Winners Losers and going Bust
+                    <br/>
+                    <ul>
+                        <li>First to 50 exactly wins</li>
+                        <li>go over 50 and you get Busted back to 25</li>
+                        <li>3 misses in a row and you are eliminated </li>
+                    </ul>
+                    
+                    <img class ='instruction' src ="./assets/instructions4.jpg">
+                </li>
+                
+            </ol>
+        </div>
+            
+            
+    </div>
+
+<!--custom rules screen-->
+<div id ='rulesedit' class = 'menu hidden'>
+        <h2>Custom rules</h2>
+        <div class = 'vertical'>
+            <h4> Add rules</h4>
+            <textarea id="playerrule" cols = "50" rows ="5" placeholder="add a rule"></textarea>
+            <button class = 'setup1' id = 'addrule'>add rule</button>
+        </div>
+
+        <div class = 'vertical' id = 'ruleshow'>
+            </div>
+        <div class = 'vertical'>
+        <button id = 'customgamebackbutton' class = 'control'>Back</button> 
+        <button id = 'customgamereadybutton' class = 'control'>Start</button> 
+
+        </div>   
+</div>
+
+
+
+<!--main body-->
+<div id = 'header'></div>
+
+<!--overall menu buttons cyclable class "minimised"-->
+<div  class = "buttons" id = 'buttons' >
+    <button class = 'control' id ='newgamebutton'>New game</button>
+    <button class = 'control' id = 'rulesbutton'>Rules</button>
+    <button class = 'control' id = 'resetbutton'>Reset</button>
+</div>
+
+   <!-- two strike warning-->
+<div class = 'menu warning hidden' id = "twostrike" >
+    <h1>You have 2 misses</h1>
+    <p>hit any block to avoid elimination</p>
+    <img class = 'instruction' src = './assets/instructions3.jpg'>
+</div>
+
+<!-- elimination screen-->
+<div class = 'menu warning hidden' id = "eliminated" >
+    <h1>Player eliminated</h1>
+    
+    <span id = 'scully'>&#128128</span>
+</div>
+
+<div id = 'gameover' class = 'menu hidden'>
+    <h1>GAMEOVER</h1>
+    <div class = 'summary' id = 'winnerssummary'>
+        <h4>Winners</h4>
+        <div id = 'podium'>
+
+        </div>
+    </div>
+
+    <div class =  'summary'  id = 'finishedsummary'>
+        <h4>Finished</h4>
+        <div id = 'finished'>
+
+        </div>
+    </div>
+
+    <div class =  'summary' id = 'eliminatedsummary'>
+        <h4>Eliminated</h4>
+        <div id = 'eliminatedlist'>
+                
+        </div>
+    </div>
+
+    <div id = 'ggbuttons' class = 'buttons minimised'>
+        <button class ='control' id = 'restartsamebutton'>Restart same players?</button>
+        <button class ='control' id = 'resetgameendbutton'>Reset</button>
+
+    </div>
+    
+    
+</div>
+
+<div id="container" class = "hidden">
+
+    <!-- contain the running score-->
+    <div class = 'zone' id = 'scoreboard'>
+        <h4>Scores on the doors</h4>
+        <div id="allscores">
+            <!-- gamestart function should add players in here -->
+        </div>
+    </div>
+
+    <!--current player-->
+    <div class = 'zone' id = 'currentturn'>
+
+        <h4><span id = 'player'>player</span> step up and chuck the molkky</h4>
+
+        <div id = 'task'>
+            <p>you rolled a <span id = 'roll'> x </span></p>
+            <p><span id = 'turntask'>y</span></p> 
+        </div>
+
+        <div id = 'scoreinput'>
+            <input id="turninput" type="number" placeholder="input your score">
+           
+            <button class = 'control' id = 'turnend'>end turn</button>
+            
+        </div>
+
+        <h4><span id = 'nextplayer'>player</span> You're up next</h4>
+
+    </div>
+
+    
+
+
+
+</div>
+</body>
+
+<script type="text/javascript" src="./js/mainscreen.js"></script>
+<script type="text/javascript" src="./js/menus.js"></script>
+<script type="text/javascript" src="./js/ruleset.js"></script>
+<script type="text/javascript" src="./js/gameSetup.js"></script>
+<script type="text/javascript" src="./js/customGame.js"></script>
+<script type="text/javascript" src="./js/gameLogicScoring.js"></script>
+<script type="text/javascript" src="./js/handlePlayerStatuses.js"></script>
+<script type="text/javascript" src="./js/gameLoop.js"></script>
+
